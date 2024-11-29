@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+
+<body>
+    求数组[2,6,1,77,52,25,7]中的最大值 要求：两种方法
+    <script>
+        // 方法一：循环遍历
+        function getMax1(arr) {
+            let max = arr[0]
+            for (let i = 0; i < arr.length; i++) {
+                max = max > arr[i] ? max : arr[i]
+            }
+            return max
+        }
+        // 方法二 对数组排序，取最大值
+        function getMax2(arr) {
+            let newArr = arr.sort(function (a, b) {
+                return a - b
+            })
+            return newArr[newArr.length - 1]
+        }
+
+        let arr = [2, 6, 1, 77, 52, 25, 7]
+        console.log(getMax1(arr));
+        console.log(getMax2(arr));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+
+<body>
+    3、3个数的最大值
+    写一个函数getMaxPlus(num1,num2,num3)，能返回传入的任意三个数字的最大值。
+    <script>
+        function getMaxPlus(a, b, c) {
+            let max = 0
+            if (a > b) {
+                max = a > c ? a : c
+            } else {
+                max = b > c ? b : c
+            }
+            return max
+        }
+        console.log('max=' + getMaxPlus(29, 89, 20));
+
+        function getMaxPlus2(a, b, c) {
+            return Math.max(a, b, c)
+        }
+        console.log('max=' + getMaxPlus2(29, 89, 20));
+    </script>
+</body>
+
+</html>

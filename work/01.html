@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+
+<body>
+    1、求数组 [2,6,1,7,4] 里面所有元素的和以及平均值。
+    <script>
+        let arr = [2, 6, 1, 7, 4]
+        function getAvg_Sum(arr) {
+            let sum = 0
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i]
+            }
+            let avg = sum / arr.length
+            return `${arr} 中元素的和是 ${sum},平均值为${avg}`
+        }
+        console.log(getAvg_Sum(arr));
+
+    </script>
+</body>
+
+</html>

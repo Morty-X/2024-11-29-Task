@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07</title>
+</head>
+
+<body>
+    7、将数组 ['red', 'green', 'blue', 'yellow', 'purple'] 的内容反过来存放要求：两种方法
+    <script>
+        let arr = ['red', 'green', 'blue', 'yellow', 'purple']
+        function reverse1(arr) {
+            let res = []
+            for (let i = arr.length - 1; i >= 0; i--) {
+                res.push(arr[i])
+            }
+            return res
+        }
+        console.log(reverse1(arr));
+
+        function reverse2(arr) {
+            let res = []
+            for (let i = 0; i < arr.length; i++) {
+                res.unshift(arr[i])
+            }
+            return res
+        }
+        console.log(reverse2(arr));
+        console.log(arr.reverse());
+
+    </script>
+</body>
+
+</html>

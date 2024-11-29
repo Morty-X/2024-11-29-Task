@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06</title>
+</head>
+6、将数组[2, 0,6, 1, 77, 0, 52, 0, 25, 7]中的 0 去掉后，
+形成一个不包含 0 的新数组。要求：多种方式（2种以上）
+<script>
+    let arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+    function getArr1(arr) {
+        let res = []
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] !== 0 ? res.push(arr[i]) : ''
+        }
+        return res
+    }
+    function getArr2(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            // splice(i, 1)从位置i删除1个元素，改变原数组
+            arr[i] === 0 ? arr.splice(i, 1) : ''
+        }
+        return arr
+    }
+    function getArr3(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            let index = arr.indexOf(0)
+            index === -1 ? '' : arr.splice(index, 1)
+        }
+        return arr
+    }
+    // function getArr4(arr) {
+    //     let str = arr.join(',')
+    //     let newArr = str.split(',')
+    //     console.log(newArr);
+    //     for (let i = 0; i < newArr.length; i++) {
+    //         newArr[i] = Number(newArr[i])
+    //     }
+    //     return newArr
+    // }
+    console.log(getArr1(arr));
+    console.log(getArr2(arr));
+    console.log(getArr3(arr));
+    // console.log(getArr4(arr));
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

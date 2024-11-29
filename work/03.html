@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+
+<body>
+    3、将数组["a",23,"b",45,32,NaN,-50,true,""," ",9]中数字元素求和
+    <script>
+        let arr = ["a", 23, "b", 45, 32, NaN, -50, true, "", " ", 9]
+        function getSum(arr) {
+            let res = 0
+            for (let i = 0; i < arr.length; i++) {
+                // 利用NAN!==NAN的特点
+                if (typeof arr[i] === "number" && arr[i] === arr[i]) {
+                    res += arr[i]
+                }
+            }
+            return res
+        }
+        console.log(getSum(arr));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+
+<body>
+    1、买面包
+    一个面包5元钱，客户可以买整数个面包，封装一个函数，客户输入钱数和个数，点击找钱按钮，弹出应找多少钱
+    <script>
+        // 找零钱
+        function getChange(money, num) {
+            if (money < 5 || num < 1) {
+                return '非法数据，请重新输入！'
+            } else if (money < num * 5) {
+                return `您的钱不够`
+            } else {
+                return money - 5 * num
+            }
+        }
+        let money = +prompt(`请输入钱数(>=5元)`)
+        let num = +prompt(`请输入要买的面包个数(>=1个)`)
+        alert(getChange(money, num))
+
+    </script>
+</body>
+
+</html>
